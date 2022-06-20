@@ -1,4 +1,3 @@
-A rock paper scissors made this time using React.
 # A rock paper scissors made this time using React.
 # JSX, CSS, HTML
 * 100% Responsive
