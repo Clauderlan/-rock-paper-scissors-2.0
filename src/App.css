@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  background: linear-gradient(270deg, #f23a29, #4849a3);
+}
+#principal-text {
+  font-family: 'Roboto', Georgia, 'Times New Roman';
+  text-align: center;
+  font-size: 2.5rem;
+}
+.home {
+  max-width: 1200px;
+  height: 500px;
+  margin: 30px auto;
+}
+
+/* LOGIN NAME */
+
+.log {
+  display: block;
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+}
+.log h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Vollkorn', sans-serif;
+}
+#form {
+  background-color: #58555a;
+  box-shadow: 0 0 10px;
+  border-radius: 20px;
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  padding: 50px;
+}
+
+#form input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  box-shadow: 0 0 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+#form button {
+  font-size: 1.2rem;
+  width: 100px;
+  height: 50px;
+  margin: 50px;
+  font-family: 'Vollkorn', sans-serif;
+  box-shadow: 0 0 10px;
+  cursor: pointer;
+}
+
+/* GAME-BODY */
+.game {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#vs {
+  font-size: 2.5rem;
+  color: white;
+  font-family: 'Rowdies';
+  line-height: 250px;
+}
+.red {
+  background-color: red;
+  min-width: 45%;
+  min-height: 500px;
+}
+#player-name {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-family: 'Rowdies', sans-serif;
+  margin: 5px;
+  color: white;
+}
+#placar-red {
+  color: white;
+  font-size: 2.5rem;
+  font-family: Impact;
+  float: right;
+  margin-right: 10px;
+}
+#game-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 90%;
+  margin-top: 5px;
+}
+#game-tools button {
+  cursor: pointer;
+}
+#game-tools-computer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 90%;
+  margin-top: 5px;
+}
+.blue {
+  background-color: blue;
+  min-width: 45%;
+  min-height: 500px;
+}
+#player-computer {
+  display: inline-block;
+  float: right;
+  margin: 5px;
+  font-size: 1.5rem;
+  font-family: 'Rowdies', sans-serif;
+  color: white;
+}
+#placar-blue {
+  color: white;
+  font-size: 2.5rem;
+  font-family: Impact;
+  margin-left: 10px;
+}
+.analytics-text {
+  min-width: 100%;
+  min-height: 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: #58555a;
+}
+.analytics-text p {
+  font-size: 1.5rem;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Final Result */
+
+.result {
+  display: none;
+  width: 600px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.mainScore {
+  display: flex;
+  flex-wrap: wrap;
+  height: 60%;
+}
+.redScore {
+  width: 50%;
+  background-color: red;
+}
+.redScore h1 {
+  font-size: 2.6rem;
+  font-family: 'Vollkorn', monospace;
+  color: white;
+  text-align: center;
+}
+#playerName,
+#machine {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Vollkorn', monospace;
+  font-size: 2rem;
+}
+#redScore,
+#blueScore {
+  font-size: 5rem;
+}
+.blueScore h1 {
+  font-size: 2.6rem;
+  font-family: 'Vollkorn', monospace;
+  color: white;
+  text-align: center;
+}
+.blueScore {
+  width: 50%;
+  background-color: blue;
+}
+.score {
+  height: 10%;
+  background-color: #222128;
+}
+#finalScore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Vollkorn', monospace;
+  color: white;
+  font-size: 1.8rem;
+  line-height: 60px;
+}
+.aboutme {
+  background-color: #222128;
+  height: 30%;
+  padding-top: 20px;
+}
+.aboutme p {
+  font-family: 'Vollkorn', monospace;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.brands {
+  display: flex;
+  margin: 0 auto;
+  min-width: 100px;
+  max-width: 300px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.brands img {
+  width: 75px;
+  height: 75px;
+}
+
+@media (max-width: 920px) {
+  /* GAME */
+
+  .game {
+    width: 500px;
+    margin: 0 auto;
+  }
+  #vs {
+    line-height: normal;
+    height: 50px;
+    width: 480px;
+    text-align: center;
+  }
+  #commands {
+    font-size: 1.3rem;
+  }
+
+  /* finalResult */
+
+  .result {
+    width: 350px;
+    margin: 0 auto;
+  }
+  .score {
+    width: 350px;
+  }
+  .aboutme {
+    width: 350px;
+  }
+}
+
+@media (max-width: 500px) {
+  /*LOGIN*/
+  .log {
+    width: 300px;
+  }
+
+  /*GAME*/
+
+  .game {
+    width: 300px;
+  }
+  .game img {
+    width: 90px;
+    height: 300px;
+  }
+  .red,
+  .blue {
+    min-height: 300px;
+  }
+  #game-tools {
+    height: 300px;
+  }
+}
