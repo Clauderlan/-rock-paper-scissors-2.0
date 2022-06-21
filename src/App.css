@@ -6,12 +6,13 @@
   text-decoration: none;
 }
 body {
-  background: linear-gradient(270deg, #f23a29, #4849a3);
+  background: linear-gradient(270deg, #58f229, #4882a3);
 }
 #principal-text {
   font-family: 'Roboto', Georgia, 'Times New Roman';
   text-align: center;
   font-size: 2.5rem;
+  margin-top: 20px;
 }
 .home {
   max-width: 1200px;
@@ -225,6 +226,24 @@ body {
 .brands img {
   width: 75px;
   height: 75px;
+}
+#restart-container{
+  background: linear-gradient(270deg, blue, red);
+  box-shadow: 0 0 10px;
+  border-radius: 20px;
+  width: 200px;
+  height: 150px;
+  margin: 30px auto;
+  padding: 50px;
+}
+#restart {
+  font-size: 1.2rem;
+  width: 100px;
+  height: 50px;
+  margin: 0 auto;
+  font-family: 'Vollkorn', sans-serif;
+  box-shadow: 0 0 10px;
+  cursor: pointer;
 }
 
 @media (max-width: 920px) {

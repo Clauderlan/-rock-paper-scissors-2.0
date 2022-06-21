@@ -10,71 +10,70 @@ import scissor from './assets/scissor.svg';
 
 function App() {
     let [playerName, setName] = useState("");
+    let [comando, setComando] = useState("Clique na imagem referente a sua jogada.");
     const [scoreBlue, setScoreBlue] = useState(0);
     const [scoreRed, setScoreRed] = useState(0);
-    const comando = document.getElementById('commands');
-    function checkAnswer(parametro){
+    function checkAnswer(select){
         /*Resposta da MAQUINA */
         const machineAnswer = Math.floor(Math.random() * (4 - 1) + 1);
-        switch(parametro){ 
+        switch(select){ 
             case 1://"player-selection-paper"
                 if (machineAnswer == 3){
-                    comando.innerText = 'A Máquina colocou pedra , você GANHOU essa rodada !';
+                    setComando(comando = 'A Máquina colocou pedra , você GANHOU essa rodada !');
                     setScoreRed(scoreRed + 1);
                     checkScore();
                 }
                 else if (machineAnswer == 2){
-                    comando.innerText = 'A Máquina colocou tesoura, você PERDEU essa rodada ! F.';
+                    setComando(comando = 'A Máquina colocou tesoura, você PERDEU essa rodada !');
                     setScoreBlue(scoreBlue + 1);
                     checkScore();
                 }
                 else {
-                    comando.innerText = 'A máquina também colocou papel, segue.';
+                    setComando('A máquina também colocou papel, segue.');
                 }
                 break;
             case 2: //"player-selection-scissor"
                 if (machineAnswer == 1){
-                    comando.innerText = 'A Máquina colocou papel, você GANHOU essa rodada !';
+                    setComando(comando = 'A Máquina colocou papel, você GANHOU essa rodada !');
                     setScoreRed(scoreRed + 1);
                     checkScore();
                 }
                 else if (machineAnswer == 3){
-                    comando.innerText = 'A Máquina colocou pedra, você PERDEU essa rodada ! F.';
+                    setComando(comando = 'A Máquina colocou pedra, você PERDEU essa rodada !');
                     setScoreBlue(scoreBlue + 1);
                     checkScore();
                 }
                 else {
-                    comando.innerText = 'A máquina também colocou tesoura, segue.';
+                    setComando(comando = 'A máquina também colocou tesoura, segue.');
                 }
                 break;
             case 3: //"player-selection-rock"
                 if (machineAnswer == 2){
-                    comando.innerText = 'A Máquina colocou tesoura, você GANHOU essa rodada !';
+                    setComando(comando = 'A Máquina colocou tesoura, você GANHOU essa rodada !');
                     setScoreRed(scoreRed + 1);
                     checkScore();
                 }
                 else if (machineAnswer == 1){
-                    comando.innerText = 'A Máquina colocou papel, você PERDEU essa rodada ! F.';
+                    setComando(comando = 'A Máquina colocou papel, você PERDEU essa rodada !');
                     setScoreBlue(scoreBlue + 1);
                     checkScore();
                 }
                 else{
-                    comando.innerText = 'A máquina também colocou pedra, segue.';
+                    setComando(comando = 'A máquina também colocou pedra, segue.');
                 }
                 break;
         }
     }
     function checkScore(){
         if (scoreBlue > 2 ){
-            comando.innerText = 'Caraca, você perdeu para a máquina.';
-            let myGreeting = setTimeout(resultFinal, 1000);
+            //setComando(comando = 'Caraca, você perdeu para a máquina.');
+            setTimeout(resultFinal, 1000);
             return 'Machine';
         }
         
         else if (scoreRed > 2){
-            comando.innerText = 'Tu é brabo, ganhou da máquina !';
-            const nome = document.getElementById('input-name');
-            let myGreeting = setTimeout(resultFinal, 2000);
+            //setComando(comando = 'Tu é brabo, ganhou da máquina !');
+            setTimeout(resultFinal, 2000);
             return playerName;
         }
         
@@ -147,9 +146,7 @@ function App() {
                         </div>
                     </div>
                     <div className="analytics-text">
-                        <p id="commands">
-                            Clique na imagem referente a sua jogada.
-                        </p>
+                        <p id="commands">{comando}</p>
                     </div>
                 </div>
                 <div className="result">
@@ -188,6 +185,11 @@ function App() {
                             </div>
                         </div>
                     </div>
+                    <div id='restart-container'>
+                        <button id="restart" onClick={() => {document.location.reload(true)}}
+                        >RESTART</button>
+                    </div>
+
                 </div>
             </section>
         </div>
